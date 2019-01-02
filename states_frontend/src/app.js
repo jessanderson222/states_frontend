@@ -79,8 +79,8 @@ class App {
                 const name = e.target.querySelector('#c-name').value
                 const notes = e.target.querySelector('#c-notes').value
                 const has_been = e.target.querySelector('#c-checkbox').checked 
-                const rating = e.target.querySelector('#c-rating').value 
-                    debugger 
+                const rating = e.target.querySelector('#c-rating').value.replace(/\D+/, '')
+                    // debugger 
                 const bodyJSON = { name, notes, has_been, rating };
                 fetch(`http://localhost:3000/api/v1/cards/${card.id}`, {
                     method: 'PATCH',
