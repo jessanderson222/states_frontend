@@ -42,7 +42,7 @@ class App {
                 'state_id': parseInt(document.querySelector('#state-id').value),
                 };
 
-                fetch('http://localhost:3000/api/vi/cards', {
+                fetch('http://localhost:3000/api/v1/cards', {
                     method: 'POST',
                     body: JSON.stringify(data),
                     headers: {
