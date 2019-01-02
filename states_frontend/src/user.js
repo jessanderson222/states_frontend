@@ -12,11 +12,12 @@ class User {
 
     renderUser() {
         return `
-       <div id="${this.id}-render">
+       <div id="${this.id}-render" class='container'>
          <h3>${this.name}</h3>
          <p>
             <button data-id="${this.id}-view">view profile</button>
-           <button data-id=${this.id}>edit</button>
+           <button data-id=${this.id} class="edit-button">edit</button>
+        <div id="${this.id}-profile" class="user-profile"></div>
          
        </div>`;
      }

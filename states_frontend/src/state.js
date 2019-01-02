@@ -12,16 +12,17 @@ class State {
 
 renderState() {
      return `
-      <div class='state-item' id='${this.id}'>
+      <div class='container' id='${this.id}'>
       <div id='${this.name}-${this.id}'>
       <h3>${this.name}</h3>
       
     <p>
-        <button data-id=${this.id}>view</button>
+        <button data-id=${this.id} class='view-button'>view</button>
         <button data-id='${this.id}-card' class='new-button'>roadtrip!</button>
       </p>
       </div>
       <div id='${this.name}-trip'></div>
+      <div id='${this.id}-view'></div>
       </div>
     `;
   }
@@ -69,6 +70,14 @@ renderNewCardForm () {
       </p>
         <input type="submit" value="Submit"/>
 </form>
+  `
+}
+
+renderViewPage() {
+  return `
+  <h3>${this.name}</h3>
+  <button class='close-button'>Close</button>
+  
   `
 }
 

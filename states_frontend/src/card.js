@@ -64,7 +64,7 @@ cardUpdateForm() {
                  <option value='rating-4'>4</option>
                  <option value='rating-5'>5</option>
              </select>
-       <button type='submit'>Save Trip</button>
+       <button type='submit' classlist='card-update-button'>Save Trip</button>
    </form>`
 }
 
