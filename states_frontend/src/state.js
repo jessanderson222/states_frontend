@@ -12,6 +12,7 @@ class State {
 
 renderState() {
      return `
+      <div class='state-item' id='${this.id}'>
       <div id='${this.name}-${this.id}'>
       <h3>${this.name}</h3>
       
@@ -21,7 +22,7 @@ renderState() {
       </p>
       </div>
       <div id='${this.name}-trip'></div>
-      
+      </div>
     `;
   }
 

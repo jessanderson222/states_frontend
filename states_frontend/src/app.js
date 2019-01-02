@@ -53,7 +53,7 @@ class App {
                          }
                         })
                     .then(response => response.json())
-                    .then(card => {console.log(updatedCard)})
+                    .then(card => {console.log(card)})
 
             })
         
@@ -64,9 +64,9 @@ class App {
             const card = Card.findCardById(id);
             if (event.target.classList.contains('edit-button')) {
                 document.querySelector('#card-update').innerHTML = card.cardUpdateForm();
-            }
+            
 
-            document.querySelector('#card-update').addEventListener('submit', e => {
+                document.querySelector('#card-update').addEventListener('submit', e => {
                 e.preventDefault();
                 // debugger 
                 const id = parseInt(e.target.dataset.id);
@@ -86,9 +86,21 @@ class App {
                     body: JSON.stringify(bodyJSON),
                 })
                 .then(res => res.json())
-                .then(updatedCard => console.log(updatedCard));
+                .then(updatedCard => console.log(updatedCard)); 
+                })
+            }
+            if(event.target.classList.contains('delete-button')){
+                // debugger 
+                event.preventDefault()
+               const id = parseInt(event.target.parentNode.parentNode.parentNode.id)
+                return fetch(`http://localhost:3000/api/v1/cards/${id}`, {
+                    method: 'DELETE'
+                }).then(response => response.json())
+                .then(json => {
+                    console.log(json);
+                })
 
-            })
+            }
         })
 
         

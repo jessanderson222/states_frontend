@@ -13,8 +13,8 @@ class Card {
 
         Card.all.push(this);
     }
-    setUser(user) {
-        this.userId = user.id
+    setUser(card) {
+        this.cardId = card.id
     }
     setState(state) {
         this.stateId = state.id 
@@ -22,15 +22,17 @@ class Card {
 
 renderCard() {
      return `
+     <div class="card-item" id=${this.id}>
     <div id="${this.name}-${this.id}">
       <h4>${this.name}</h4>
       <p>
         <button data-id=${this.id}>view</button>
         <button data-id='${this.id}-edit' class='edit-button'>edit</button>
-        <button data-id='${this.id}-delete'>delete</button>
+        <button data-id='${this.id}-delete' class='delete-button'>delete</button>
     </p>
     </div>
-    <div id="${this.name}-edit"></div>`;
+    <div id="${this.name}-edit"></div>
+    </div>`;
   }
 
   static findCardById(id) {
