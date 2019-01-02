@@ -1,17 +1,15 @@
 let cardId = 0
 class Card {
-    constructor(name, has_been, notes, rating, user, state) {
-        this.id = ++cardId
-        this.name = name 
-        this.has_been = has_been
-        this.notes = notes
-        this.rating = rating
-        if(user){
-            this.setUser(user)
-        }
-        if(state){
-            this.setState(state)
-        }
+    constructor(data) {
+        this.id = data.id
+        this.user_id = data.user_id
+        this.state_id = data.state_id
+        this.name = data.name 
+        this.has_been = data.has_been
+        this.notes = data.notes
+        this.rating = data.rating
+        this.user = data.user
+        this.state = data.state
 
         Card.all.push(this);
     }

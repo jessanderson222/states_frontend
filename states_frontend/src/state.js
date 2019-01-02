@@ -49,7 +49,7 @@ renderNewCardForm () {
   </p>
   <label>Notes</label>
   <p>
-  <input type='text' id="c-notes" name="notes">
+  <input type='text'id="c-notes" name="notes">
   </p>
     <label>Have you taken your trip?</label>
     <p>

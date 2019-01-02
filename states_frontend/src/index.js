@@ -22,12 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardApi = "http://localhost:3000/api/v1/cards"
     fetch(cardApi)
     .then(res => res.json())
-    .then(json => {
-      json.forEach(card => {
+    .then(data => data.forEach(card => {
         const newCard = new Card(card);
-        document.querySelector('#cards-list').innerHTML += newCard.renderListItem();
-      })
-    })
+        document.querySelector('#cards-list').innerHTML += newCard.renderCard();
+      }))
 
   });
 
