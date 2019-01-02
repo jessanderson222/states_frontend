@@ -12,11 +12,13 @@ class User {
 
     renderUser() {
         return `
-       <li>
-         <h3>${this.name}
+       <div id="${this.id}-render">
+         <h3>${this.name}</h3>
+         <p>
+            <button data-id="${this.id}-view">view profile</button>
            <button data-id=${this.id}>edit</button>
-         </h3>
-       </li>`;
+         
+       </div>`;
      }
 
     static findById(id) {

@@ -17,7 +17,7 @@ renderState() {
       
     <p>
         <button data-id=${this.id}>view</button>
-        <button data-id='${this.id}-card'>roadtrip!</button>
+        <button data-id='${this.id}-card' class='new-button'>roadtrip!</button>
       </p>
       </div>
       <div id='${this.name}-trip'></div>

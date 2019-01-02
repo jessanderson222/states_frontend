@@ -22,13 +22,15 @@ class Card {
 
 renderCard() {
      return `
-    <li>
-      <h3>${this.name}
+    <div id="${this.name}-${this.id}">
+      <h4>${this.name}</h4>
+      <p>
         <button data-id=${this.id}>view</button>
-        <button data-id='${this.id}-edit'>edit</button>
+        <button data-id='${this.id}-edit' class='edit-button'>edit</button>
         <button data-id='${this.id}-delete'>delete</button>
-      </h3>
-    </li>`;
+    </p>
+    </div>
+    <div id="${this.name}-edit"></div>`;
   }
 
   static findCardById(id) {
@@ -38,21 +40,42 @@ renderCard() {
 cardUpdateForm() {
    return `
    <form data-id=${this.id}>
-       <label>Name</label>
-       <p>
-           <input type="text" id="card-name" value="${this.name}" />
-       </p>
-       <label>Notes</label>
-       <p>
-           <input type="text" id="card-notes" value="${this.notes}" />
-       </p>
-       <label>Rating</label>
-       <p>
-           <input type="text" id="card-rating" value="${this.rating}" />
-       </p>
+   <label>Name</label>
+   <p>
+   <input id='c-name' type='text' name='Name' value="${this.name}">
+   </p>
+   <label>Notes</label>
+   <p>
+   <input type='text'id="c-notes" name="notes" value="${this.notes}">
+   </p>
+     <label>Have you taken your trip?</label>
+     <p>
+         <input id='c-checkbox' type="checkbox" name="has_been" value="been">
+     </p>
+     <label>Rating</label>
+     <p>
+             <select id="c-rating" name="rating">
+                 <option value='rating-0'>0</option>
+                 <option value='rating-1'>1</option>
+                 <option value='rating-2'>2</option>
+                 <option value='rating-3'>3</option>
+                 <option value='rating-4'>4</option>
+                 <option value='rating-5'>5</option>
+             </select>
        <button type='submit'>Save Trip</button>
    </form>`
 }
+
+// deleteCard(e) {
+//     const id = e.target.dataset.id
+//     fetch(`http://localhost:3000/api/v1/cards/${this.id}`, {
+//         method: 'DELETE'
+//     })
+//     .then(() => {
+//         document.getElementById('cards-list')
+//         .removeChild(document.getElementById(this.id))
+//     })
+// }
 
 }
   Card.all = [];
