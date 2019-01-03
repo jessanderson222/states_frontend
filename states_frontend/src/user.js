@@ -14,8 +14,10 @@ class User {
         return `
        <div id="${this.id}-render" class='container'>
          <h3>${this.name}</h3>
+         <img src="${this.img_url}" alt="${this.name}-img" height="400" width="300">
+         <p>${this.location}</p>
+         <p>Favorite Roadtrip: ${this.favorite_state}</p>
          <p>
-            <button data-id="${this.id}-view">view profile</button>
            <button data-id=${this.id} class="edit-button">edit</button>
         <div id="${this.id}-profile" class="user-profile"></div>
          

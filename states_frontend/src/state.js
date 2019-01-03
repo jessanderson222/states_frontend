@@ -14,7 +14,7 @@ renderState() {
      return `
       <div class='state-card' id='${this.id}'>
       <div id='${this.name}-${this.id}'>
-      <h3>${this.name}</h3>
+      <h4>${this.name}</h4>
       <br>
       <img src="${this.img_url}" alt="${this.name}-img" height="100" width="200">
 

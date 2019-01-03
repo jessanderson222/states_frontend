@@ -122,6 +122,29 @@ class App {
             
         })
 
+        document.querySelector('.navbar.navbar-expand-lg.navbar-light.bg-light').addEventListener('click', e => {
+            if (e.target.id === 'home-nav') {
+                document.querySelector('#cards-list').hidden = true
+                document.querySelector('#users-list').hidden = true
+                document.querySelector('#states-list').hidden = true
+            }
+            if (e.target.id === 'states-nav') {
+                document.querySelector('#states-list').hidden = false
+                document.querySelector('#users-list').hidden = true
+                document.querySelector('#cards-list').hidden = true
+            }
+            if (e.target.id === 'my-trips-nav') {
+                document.querySelector('#cards-list').hidden = false 
+                document.querySelector('#users-list').hidden = true
+                document.querySelector('#states-list').hidden = true
+            }
+            if (e.target.id === 'profile-nav') {
+                document.querySelector('#users-list').hidden = false
+                document.querySelector('#cards-list').hidden = true
+                document.querySelector('#states-list').hidden = true
+            }
+        })
+
 
         
     }

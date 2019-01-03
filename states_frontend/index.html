@@ -24,13 +24,16 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="#">States<span class="sr-only">(current)</span></a>
+                <a class="nav-link" id="home-nav" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="states-nav" href="#">States<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                     <a class="nav-link" id="my-trips-nav" href="#">My Trips</a>
             </li>
             <li class="nav-item">
-                    <a class="nav-link" id="profile-nav" href="#">Profile</a>
+                    <a class="nav-link" id="profile-nav" href="#">My Profile</a>
              </li>
             </div>
           </ul>
@@ -38,19 +41,27 @@
       </nav>
     
       <div id="card-form"></div>
+      <div id='card-update'></div>
+      
+      <div hidden id='users-list' class="col-sm"></div>
       <div id='users'></div>
         <div id='user-update'></div> 
       
+      <div class="container">
+          <div class="row">
+                <div hidden id='cards-list'></div>
+          </div>
+      </div>  
 
       <div class="container">
         <div class="row">
           <!-- <div class="col-sm"> -->
-            <div id='states-list' class=""></div>
+            <div hidden id='states-list' class=""></div>
             <!-- </div> -->
         </div>
     </div>
    
-    <div id='users-list' class="col-sm"></div>
+    
     
     
     <!-- <ul id='states-list'></ul> -->
@@ -58,9 +69,9 @@
 
     <div id='cards-view'></div>
     
-    <ul id='cards-list'></ul>
+   
     <div id='cards'></div>
-    <div id='card-update'></div>
+    
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -25,8 +25,10 @@ renderCard() {
      <div class="card-item" id=${this.id}>
     <div id="${this.name}-${this.id}">
       <h4>${this.name}</h4>
+      <h6>trip by ${this.user.name}</h6>
+      <p>Rating: ${this.rating}</p>
+      <p>${this.notes}</p>
       <p>
-        <button data-id=${this.id}>view</button>
         <button data-id='${this.id}-edit' class='edit-button'>edit</button>
         <button data-id='${this.id}-delete' class='delete-button'>delete</button>
     </p>
@@ -45,9 +47,9 @@ cardUpdateForm() {
    <label>Name</label>
    <p>
    <input id='c-name' type='text' name='Name' value="${this.name}">
-   </p>
+   
    <label>Notes</label>
-   <p>
+   
    <input type='text'id="c-notes" name="notes" value="${this.notes}">
    </p>
      <label>Have you taken your trip?</label>
@@ -63,8 +65,9 @@ cardUpdateForm() {
                  <option value='rating-3'>3</option>
                  <option value='rating-4'>4</option>
                  <option value='rating-5'>5</option>
-             </select>
+             </select><p>
        <button type='submit' classlist='card-update-button'>Save Trip</button>
+       </p>
    </form>`
 }
 
