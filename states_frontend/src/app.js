@@ -109,11 +109,11 @@ class App {
             }
         })
 
-        document.querySelector('#states-view').addEventListener('click', e => {
-            if (e.target.classList.contains('close-button')) {
-                document.querySelector('#states-view').innerHTML = ""
-            }
-        })
+        // document.querySelector('#states-view').addEventListener('click', e => {
+        //     if (e.target.classList.contains('close-button')) {
+        //         document.querySelector('#states-view').innerHTML = ""
+        //     }
+        // })
 
         document.querySelector('#card-update').addEventListener('click', e => {
             if (e.target.classList.contains('close-button')){
